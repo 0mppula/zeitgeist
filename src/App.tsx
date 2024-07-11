@@ -4,15 +4,30 @@ import { cn } from './lib/utils';
 import { Input } from './components/ui/input';
 import { useEffect, useState } from 'react';
 import { Search } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 
 function App() {
-	const [query, setQuery] = useState('');
 	const [internalQuery, setInternalQuery] = useState('');
+	const [query, setQuery] = useSearchParams({
+		q: '',
+	});
+	const parsedQuery = query.get('q') || '';
 
 	// debounce
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			setQuery(internalQuery);
+			if (internalQuery === '') {
+				// remove query param from URL
+				setQuery({});
+				return;
+			}
+
+			setQuery(
+				{ q: internalQuery },
+				{
+					replace: true,
+				}
+			);
 		}, 300);
 
 		return () => clearTimeout(timeout);
@@ -31,7 +46,7 @@ function App() {
 				<Input
 					className="pl-10"
 					type="search"
-					placeholder="Fanum tax"
+					placeholder="Bussin"
 					value={internalQuery}
 					onChange={(e) => setInternalQuery(e.target.value)}
 				/>
@@ -44,8 +59,8 @@ function App() {
 					.sort((a, b) => b.aura - a.aura)
 					.filter(
 						(item) =>
-							item.name.toLowerCase().includes(query.toLowerCase()) ||
-							item.description.toLowerCase().includes(query.toLowerCase())
+							item.name.toLowerCase().includes(parsedQuery.toLowerCase()) ||
+							item.description.toLowerCase().includes(parsedQuery.toLowerCase())
 					)
 					.map((item) => (
 						<Card key={item.name}>

@@ -193,14 +193,14 @@ export const zeitgeist = [
 		name: 'Cook (verb)',
 		description:
 			'To "cook", as a verb, is to prepare or initiate a situation with intent of creating a result.The most common uses ("Someone cooked here" and "Let him cook") are a request to give one space to proceed uninterrupted (especially when saying or doing something provocative) in the hope that the result might be entertaining, if not agreeable.',
-		hot: false,
+		hot: true,
 		aura: 550,
 	},
 	{
 		name: 'Cooked (adjective)',
 		description:
 			'When a person or subject is Cooked (As an adjective), it\'s the state of being in any sort of danger, physical, emotional, of failure, or of reputation. Can be used in a similar fashion to "Doomed." It can also mean to have been humiliated, embarrassed, or messed up in some way.',
-		hot: false,
+		hot: true,
 		aura: 512,
 	},
 	{
@@ -297,7 +297,7 @@ export const zeitgeist = [
 		hot: false,
 		aura: -363,
 	},
-	{ name: 'GOAT', description: 'Acronym for Greatest Of All Time.', hot: false, aura: 534 },
+	{ name: 'GOAT', description: 'Acronym for Greatest Of All Time.', hot: true, aura: 534 },
 	{
 		name: 'Gucci',
 		description:
