@@ -24,7 +24,6 @@ export const zeitgeist = [
 		aura: 900,
 		description: 'Gabgool is a colloquial term for capicola, a type of Italian cold cut.',
 	},
-
 	{
 		name: 'Kato Snap',
 		hot: true,
