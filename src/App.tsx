@@ -7,11 +7,11 @@ import { Search } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 
 function App() {
-	const [internalQuery, setInternalQuery] = useState('');
 	const [query, setQuery] = useSearchParams({
 		q: '',
 	});
 	const parsedQuery = query.get('q') || '';
+	const [internalQuery, setInternalQuery] = useState(parsedQuery);
 
 	// debounce
 	useEffect(() => {
