@@ -24,18 +24,7 @@ export const zeitgeist = [
 		aura: 900,
 		description: 'Gabgool is a colloquial term for capicola, a type of Italian cold cut.',
 	},
-	{
-		name: 'Homohaulikko',
-		hot: false,
-		aura: -500,
-		description: 'Homohaulikko is a Finnish term for a shotgun used by jonnet in CS2.',
-	},
-	{
-		name: 'Keharii Tapahtuu',
-		hot: true,
-		aura: -300,
-		description: 'Keharii tapahtuu is a Finnish saying used when something stupid happens.',
-	},
+
 	{
 		name: 'Kato Snap',
 		hot: true,
