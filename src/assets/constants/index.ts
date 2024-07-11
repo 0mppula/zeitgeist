@@ -1,17 +1,5 @@
 export const zeitgeist = [
 	{
-		name: 'Doggayum (🐶)',
-		hot: true,
-		aura: 935,
-		description: 'Doggayum (🐶) is a corporate-friendly alternative to "Goddaym.',
-	},
-	{
-		name: 'صرصور',
-		hot: true,
-		aura: 950,
-		description: 'صرصور (sarsur) is the arabic translation for cockroach.',
-	},
-	{
 		name: 'Isuzu',
 		hot: false,
 		aura: 400,
